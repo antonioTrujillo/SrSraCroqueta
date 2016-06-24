@@ -1,0 +1,58 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 wallpaper">
+			<div class="container">
+ 				<div class="row">
+ 					<div class="col-md-6 seccion">
+ 								<h1 class="brainFlower">{{proveedor.premises}}</h1>
+			 					<div class="places" app-providers ng-repeat="local in proveedor.locations">
+			 					</div app-providers>
+			 					<div class="page"><img class="pic" src="markers/prevnext.png"></div>
+			 		</div>
+	 				<div class="col-md-6 center">
+		 				
+						<div ng-controller="MarkerAnimationCtrl as vm">
+                         <ng-map class="sizeMap" 
+                             center="40.422712, -3.704263", 
+                             zoom="11">
+                            <div ng-repeat="local in proveedor.locations"><!--info cogida de el json para marcadores uno por uno(todo correcto) -->
+                                <marker 
+                                        position="{{local.lat}},{{local.long}}" 
+                                        title="{{local.title}}" 
+                                        icon="{{local.marker}}" 
+                                        
+                                        on-click="vm.toggleBounce()"
+                                         animation="DROP"
+                                         draggable="true">
+
+<!--.....................Aqui ya da problemas para coger cada uno de los marcadores.............................................................-->
+
+                                <info-window id="bar" max-width="400"><!--tamaño ventana-->
+                                <div ng-non-bindable><!--info cogida de el json para ventana -->
+                                    <img ng-src="{{local.photo}}">
+                                    <h5>{{local.title}}</h5>
+                                    <p>{{local.address}}</p>
+                                    <p>{{local.price}}</p>
+                                    <img ng-src="{{local.stars}}">
+                                    <p>{{local.phone}}</p>
+                                </div>
+                                </info-window>
+                                </marker>
+
+                            </div>
+                         </ng-map>
+                     </div>
+
+	 				</div>
+		 			  
+
+ 				</div>
+			</div>
+			<div class="centerdescription"app-descriptions ng-repeat=" local in proveedor.locations | filter:filters"></div app-descriptions> 
+		</div>
+	
+	</div>
+	
+</div>
+
+

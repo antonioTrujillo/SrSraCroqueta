@@ -1,0 +1,20 @@
+
+}
+@font-face {
+  font-family: 'BrainFlowerEuro';
+  src: url('BrainFlowerEuro.eot');
+  src: url('BrainFlowerEuro.woff2') format('woff2'),
+       url('BrainFlowerEuro.eot?#iefix') format('embedded-opentype');
+  font-weight: bold;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'BrainFlower';
+  src: url('BrainFlower.woff') format('woff'),
+       url('BrainFlower.ttf') format('truetype'),
+       url('BrainFlower.svg#BrainFlower') format('svg');
+  font-weight: bold;
+  font-style: bold;
+}
+

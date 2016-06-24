@@ -1,0 +1,210 @@
+[
+	{
+	"id":1,
+	"premises":"Restaurantes",
+	"locations": [
+
+		{	"id":1,
+			"photo":"markers/miniPhotos/1.jpg",
+			"title":"La Pesquera de Madrid",
+			"address":"Avenida Portugal s/n 28011 Madrid (Madrid)",
+			"marker":"markers/sr.png",
+			"price":"Precio entre 80 y 120€.",
+			"stars":"markers/5stars.png",
+			"descriptions":"descripciones/restaurantes/la-pesquera.png",
+			"phone":916461612,
+			"lat":40.414669,
+			"long":-3.734581
+		}, {
+			"id":2,
+			"photo":"markers/miniPhotos/2.jpg",
+			"title":"Seven & Six Gastrobar",
+			"address":"Pintor Rosales, 76 28008 Madrid (Madrid)",
+			"marker":"markers/sr.png",
+			"price":"Desde 75€.",
+			"stars":"markers/5stars.png",
+			"descriptions":"descripciones/restaurantes/seven-and-six-gastrobar.png",
+			"phone":915497536,
+			"lat":40.432054,
+			"long":-3.724311
+		}, {
+			"id":3,
+			"photo":"markers/miniPhotos/3.jpg",
+			"title":"La Parrilla del Embarcadero",
+			"address":"Paseo del Embarcadero  28011 Madrid (Madrid)",
+			"marker":"markers/sr.png",
+			"price":"Precio entre 80 y 120€.",
+			"stars":"markers/3stars.png",
+			"descriptions":"descripciones/restaurantes/la-parrilla-del-embarcadero.png",
+			"phone":914631024,
+			"lat":40.462606,
+			"long":-3.688756
+		}, {
+			"id":4,
+			"photo":"markers/miniPhotos/4.jpg",
+			"title":"Restaurante Pedro Larumbe",
+			"address":"Cava Baja, 12 28005 Madrid (Madrid) ",
+			"marker":"markers/sr.png",
+			"price":"Precio a partir de 45€.",
+			"stars":"markers/5stars.png",
+			"descriptions":"descripciones/restaurantes/pedro-larumbe.png",
+			"phone":911191494,
+			"lat":40.413345,
+			"long":-3.708546
+		}, {
+			"id":5,
+			"photo":"markers/miniPhotos/5.jpg",
+			"title":"Restaurante Portonovo",
+			"address":"Glorieta de Carlos V 28080 Madrid (Madrid)",
+			"marker":"markers/sr.png",
+			"price":"Precio a partir de 65€.",
+			"stars":"markers/5stars.png",
+			"descriptions":"descripciones/restaurantes/portonovo.png",
+			"phone":915309746,
+			"lat":40.407628,
+			"long":-3.691721
+		}
+
+
+]
+
+}, {
+	"id":2,
+	"premises":"Iglesias",
+	"locations": [
+
+		{	"id":1,
+			"photo":"markers/miniPhotos/",
+			"title":"Parroquia de los Santos Inocentes",
+			"address":"Calle de Embajadores, 209,28045 Madrid",
+			"marker":"markers/sr.png",
+			"descriptions":"descripciones/ iglesias/santos-inocentes.png",
+			"price":"Sin canon",
+			"stars":"markers/5stars.png",
+			"phone":915396644,
+			"lat":40.456421,
+			"long":-3.706983
+		}, {
+			"id":2,
+			"photo":"markers/miniPhotos/",
+			"title":"Basílica de Nuestra Señora de Atocha",
+			"descriptions":"descripciones/ iglesias/nuestra-senora-atocha.png",
+			"address":"Av. de la Ciudad de Barcelona, 1,28007 Madrid",
+			"marker":"markers/sr.png",
+			"price":"Canon desde 150€.",
+			"stars":"markers/5stars.png",
+			"phone":914344020,
+			"lat":40.405784,
+			"long":-3.683070
+		}, {
+			"id":3,
+			"photo":"markers/miniPhotos/",
+			"title":"Real Basílica de San Francisco el Grande",
+			"descriptions":"descripciones/ iglesias/san-franciscoelgrande.png",
+			"address":"C/ San Buenaventura, 1,28005 Madrid",
+			"marker":"markers/sr.png",
+			"price":"Canon sin especificar.",
+			"stars":"markers/4stars.png",
+			"phone":913653800,
+			"lat":40.414669,
+			"long":-3.731590
+		}, {
+			"id":4,
+			"photo":"markers/miniPhotos/",
+			"title":"Parroquia Beata María Ana de Jesús",
+			"descriptions":"descripciones/ iglesias/beata-maria-jesus.png",
+			"address":"C/ Guillermo de Osma, 10,28045 Madrid",
+			"marker":"markers/sr.png",
+			"price":"Canon sin especificar.",
+			"stars":"markers/3stars.png",
+			"phone":914734973,
+			"lat":40.394006,
+			"long":-3.696667
+		}, {
+			"id":5,
+			"photo":"markers/miniPhotos/",
+			"title":"Parroquia San Millán y San Cayetano",
+			"descriptions":"descripciones/ iglesias/san-millan-san-cayetano.png",
+			"address":"Calle de Embajadores, 15,28012 Madrid",
+			"marker":"markers/sr.png",
+			"price":"Canon sin especificar.",
+			"stars":"markers/4stars.png",
+			"phone":915270790,
+			"lat":40.409334,
+			"long":-3.704649
+		}
+
+	]
+
+	}, {
+	"id":3,
+	"premises":"Floristerias",
+	"locations": [
+
+		{
+			"photo":"markers/miniPhotos/11.png",
+			"title":"Floristería Jicara",
+			"address":"Condesa de Venadito, 22 28027 Madrid (Madrid)",
+			"marker":"markers/sr.png",
+			"price":"Desde 30€",
+			"stars":"markers/5stars.png",
+			"phone":914043740,
+			"lat":40.445102,
+			"long":-3.652315
+		}, {
+			"photo":"markers/miniPhotos/12.jpg",
+			"title":"Aster Decora",
+			"address":"Conde de Vistahermosa, 36 28019 Madrid (Madrid)",
+			"marker":"markers/sr.png",
+			"price":"Desde 100€",
+			"stars":"markers/5stars.png",
+			"phone":915191310,
+			"lat":40.441681,
+			"long":-3.669492
+		}, {
+			"photo":"markers/miniPhotos/13.jpg",
+			"title":"Flores María del Prado",
+			"address":"Avda. Niza 5 28022 Madrid (Madrid)",
+			"marker":"markers/sr.png",
+			"price":"Desde 40€ hasta 100€",
+			"stars":"markers/4stars.png",
+			"phone":913653800,
+			"lat":40.425665,
+			"long":-3.605793
+		}, {
+			"photo":"markers/miniPhotos/14.jpg",
+			"title":"Efímeras",
+			"address":"Avenida de Logroño, 335 28042 Madrid (Madrid)",
+			"marker":"markers/sr.png",
+			"price":"Desde 50€",
+			"stars":"markers/5stars.png",
+			"phone":913010973,
+			"lat":40.431406,
+			"long":-3.722610
+		}, {
+			"photo":"markers/miniPhotos/15.jpg",
+			"title":"Quedeflores",
+			"address":"Calle Doctor Esquerdo, 27 28028 Madrid (Madrid)",
+			"marker":"markers/sr.png",
+			"price":"Desde 50€",
+			"stars":"markers/5stars.png",
+			"phone":915270790,
+			"lat":40.387419,
+			"long":-3.686715
+		}
+
+	]
+}
+
+]
+
+
+
+
+
+
+
+
+
+
+
