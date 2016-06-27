@@ -33,7 +33,7 @@ app.config(["$routeProvider","$locationProvider",function($routeProvider,$locati
 			controller:"showController",
 			controllerAs:"show"
 		});
-		$routeProvider.when("",{//mapa
+		$routeProvider.when("/ShowSuppliers/:proveedorId/:id",{
 			templateUrl:"templates/show.html",
 			controller:"showController",
 			controllerAs:"restaurant"
@@ -43,6 +43,7 @@ app.config(["$routeProvider","$locationProvider",function($routeProvider,$locati
 			controller:"diyController",
 			controllerAs:"diy"
 		});
+		$routeProvider.otherwise({ redirectTo : "/"})
 
 		
 }]);
@@ -135,16 +136,13 @@ app.controller("showController", function($scope,$routeParams,$http){
 		var proveedor= id.data;
 		$scope.proveedor= findProveedor(proveedor,Id);
 	});
-	$http.get(RESTAURANTS).then(function(data){
-		$scope.restaurants = data.data
-		console.log($scope.restaurants);
-	});
+    $scope.myDataId= $routeParams.id
 
 		 $scope.myVar = false;
     $scope.toggle = function() {
         $scope.myVar = !$scope.myVar;
     };
-     $scope.filters = { };
+     $scope.filters = {};
 });
 
 //......animation del marker......
