@@ -175,9 +175,11 @@ a {
 }
 
 input {
-  border-radius: 15px !important;
-  border-width: 0px !important;
-  width: 270px;
+    border-radius: 15px !important;
+    border-width: 0px !important;
+    width: 300px;
+    height: 35px;
+    text-align: center;
 }
 
 .textarea {
@@ -194,10 +196,11 @@ input {
   margin-top: 20px;
 }
 
-.sent {
-  max-width: 31px !important;
-  max-height: 35px !important;
-  border-radius: 0px !important;
+.btn-warning {
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+    border-radius: 5px;
 }
 .sizeMap{
 
@@ -208,21 +211,28 @@ input {
   border: 1px;
   margin: 3% 0% 1% -3%;
 }
-.col-md-6 > .center{
+.col-md-6 > .center {
 -webkit-border-radius: 20px !important;
 -moz-border-radius: 20px !important;
 border-radius: 20px !important;
 margin: 0px 0px 0px 0px !important;
 
 }
-.brainFlower{
+.brainFlower {
   font-family:BrainFlower, BrainFlowerEuro;
-  font-weight: 900;
+  font-weight: 600;
   font-size: 280%;
   text-align: center !important;
-  margin: 55px 0px 30px 0px;
+  margin: 70px 0px 50px 0px;
 }
-.places  a:hover{
+.titleH {
+  
+  font-weight: 400;
+  text-align: center;
+  margin: 20px 0px 50px 0px;
+  padding: 10px;
+}
+.places  a:hover {
   
   
   text-decoration: none !important;
@@ -254,14 +264,16 @@ a:-webkit-any-link {
 }
 
 .w100 {
- width: 100% !important; 
+ width: 50% !important; 
+ text-align: center !important;
 }
 
 .btn-primary {
- background: #952b2b; border-color: #957575; 
+ background: #F7CAC9; border-color: #957575; 
 }
 .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
- background: #782b2b;  border-color: #952b2b; 
+ background: #FF9999;  border-color: #957575; 
+ border-width: 1px !important;
 }
 .col-md-6 {
     padding-right:0px !important; 
@@ -271,4 +283,14 @@ a:-webkit-any-link {
 .centerdescription{
   text-align:center !important;
   margin: 2% 1%;
+}
+#search.form-control{
+    border-radius: 15px !important;
+    border-width: 2px !important;
+    text-align: center;
+    /* width: 270px; */
+    /* font-size: 19px; */
+}
+.center{ 
+text-align: center;
 }

@@ -133,7 +133,9 @@ a {
 input {
   border-radius: 15px !important;
   border-width: 0px !important;
-  width: 270px; }
+  width: 300px;
+  height: 35px;
+  text-align: center; }
 
 .textarea {
   border-radius: 15px !important;
@@ -146,10 +148,11 @@ input {
 .contents {
   margin-top: 20px; }
 
-.sent {
-  max-width: 31px !important;
-  max-height: 35px !important;
-  border-radius: 0px !important; }
+.btn-warning {
+  color: #fff;
+  background-color: #f0ad4e;
+  border-color: #eea236;
+  border-radius: 5px; }
 
 .sizeMap {
   width: 585px;
@@ -167,10 +170,16 @@ input {
 
 .brainFlower {
   font-family: BrainFlower, BrainFlowerEuro;
-  font-weight: 900;
+  font-weight: 600;
   font-size: 280%;
   text-align: center !important;
-  margin: 55px 0px 30px 0px; }
+  margin: 70px 0px 50px 0px; }
+
+.titleH {
+  font-weight: 400;
+  text-align: center;
+  margin: 20px 0px 50px 0px;
+  padding: 10px; }
 
 .places a:hover {
   text-decoration: none !important;
@@ -198,15 +207,17 @@ a:-webkit-any-link {
   margin-bottom: 25px !important; }
 
 .w100 {
-  width: 100% !important; }
+  width: 50% !important;
+  text-align: center !important; }
 
 .btn-primary {
-  background: #952b2b;
+  background: #F7CAC9;
   border-color: #957575; }
 
 .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
-  background: #782b2b;
-  border-color: #952b2b; }
+  background: #FF9999;
+  border-color: #957575;
+  border-width: 1px !important; }
 
 .col-md-6 {
   padding-right: 0px !important;
@@ -216,5 +227,15 @@ a:-webkit-any-link {
 .centerdescription {
   text-align: center !important;
   margin: 2% 1%; }
+
+#search.form-control {
+  border-radius: 15px !important;
+  border-width: 2px !important;
+  text-align: center;
+  /* width: 270px; */
+  /* font-size: 19px; */ }
+
+.center {
+  text-align: center; }
 
 /*# sourceMappingURL=index.css.map */

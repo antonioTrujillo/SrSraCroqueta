@@ -4,27 +4,27 @@
 			<div class="container">
  				<div class="row">
  					<div class="col-md-6 seccion">
- 								<h1 class="brainFlower">{{proveedor.premises}}</h1>
-			 					<div class="places" app-providers ng-repeat="local in proveedor.locations">
-			 					</div app-providers>
-			 					<div class="page"><img class="pic" src="markers/prevnext.png"></div>
+						<h1 class="brainFlower">{{proveedor.premises}}</h1>
+	 					<div class="places" app-providers ng-repeat="local in proveedor.locations">
+	 					</div app-providers>
+	 					<div class="page"><img class="pic" src="markers/prevnext.png"></div>
 			 		</div>
 	 				<div class="col-md-6 center">
-						<div ng-controller="MarkerAnimationCtrl as vm">
-                         <ng-map class="sizeMap" 
+                         <ng-map class="sizeMap"
+                            default-style="true"
                              center="40.422712, -3.704263", 
                              zoom="11">
-                            <div ng-repeat="local in proveedor.locations"><!--info cogida de el json para marcadores uno por uno(todo correcto) -->
-                                <marker 
-                                        position="{{local.lat}},{{local.long}}" 
-                                        title="{{local.title}}" 
-                                        icon="{{local.marker}}" 
-                                        on-click="vm.toggleBounce()"
-                                         animation="DROP"
-                                         draggable="true">
-                                </marker>
-                                <info-window id="foo" on-mouseover="vm.mouseover()" max-width="400"><!--tamaño ventana-->
-                                <div ng-non-bindable=""><!--info cogida de el json para ventana -->
+                        <div><!--info cogida de el json para marcadores uno por uno(todo correcto) -->
+                            <marker ng-repeat="local in proveedor.locations"
+                                id="gmapMarker"
+                                position="{{local.lat}},{{local.long}}" 
+                                title="{{local.title}}"
+                                icon="{{local.marker}}"
+                                on-click="showInfoWindow('myInfoWindow')"
+                                animation="DROP"
+                                draggable="true">
+                                <info-window id="myInfoWindow" visible-on-marker="gmapMarker" max-width="400">
+                                <div ng-non-bindable="">
                                     <img ng-src="{{local.photo}}">
                                     <h5>{{local.title}}</h5>
                                     <p>{{local.address}}</p>
@@ -33,21 +33,21 @@
                                     <p>{{local.phone}}</p>
                                 </div>
                                 </info-window>
-
-                            </div>
-                         </ng-map>
+                            </marker>
+                            
+                            
+                                   
+                        </div>
+                    
+                        </ng-map>
                      </div>
-
 	 				</div>
-		 			  
-
  				</div>
 			</div>
-			<div class="centerdescription"app-descriptions ng-repeat="local in proveedor.locations"></div app-descriptions> 
-		</div>
-	
-	</div>
-	
+		<div class="centerdescription"app-descriptions ng-repeat="local in proveedor.locations">
+        </div app-descriptions> 
+	   </div>
+	</div>	
 </div>
 
 

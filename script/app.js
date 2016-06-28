@@ -1,91 +1,94 @@
-
 var findProveedor = function(array,id){
-	for(var i = 0, m=null; i<array.length; ++i){
-		if(array[i].id == id){
-			return array [i];
-			//break;	
-		};
-		
-	};
+    for(var i = 0, m=null; i<array.length; ++i){
+        if(array[i].id == id){
+            return array [i];
+            //break;    
+        };
+        
+    };
 };
 
 
 (function(){
 var DATA= "data/proveedores.json";
-var RESTAURANTS= "data/restaurants.json";
-var app=angular.module("myApp",["ngRoute","ngMap","ngAnimate"]);
+var app=angular.module("myApp",["ngRoute","ngMap"]);
 
 app.config(["$routeProvider","$locationProvider",function($routeProvider,$locationProvider){
-			$locationProvider.html5Mode(true);
-		
-
-		$routeProvider.when("/",{
-			templateUrl:"templates/home.html",
-			controller:"indexController",
-			controllerAs:"home"
-		});
-		$routeProvider.when("/formulario",{//formulario
-			templateUrl:"templates/form.html",
-			controllerAs:"form"
-		});
-		$routeProvider.when("/ShowSuppliers/:proveedorId",{//mapa
-			templateUrl:"templates/show.html",
-			controller:"showController",
-			controllerAs:"show"
-		});
-		$routeProvider.when("/ShowSuppliers/:proveedorId/:id",{
-			templateUrl:"templates/show.html",
-			controller:"showController",
-			controllerAs:"restaurant"
-		});
-		$routeProvider.when("/DIY",{
-			templateUrl:"templates/diy.html",
-			controller:"diyController",
-			controllerAs:"diy"
-		});
-		$routeProvider.otherwise({ redirectTo : "/"})
-
-		
+            $locationProvider.html5Mode(true);
+        
+        $routeProvider.when("/",{
+            templateUrl:"templates/home.html",
+            controller:"indexController",
+            controllerAs:"home"
+        });
+        $routeProvider.when("/formulario",{//formulario
+            templateUrl:"templates/form.html",
+            controller:"indexController",
+            controllerAs:"form"
+        });
+        $routeProvider.when("/ShowSuppliers/:proveedorId",{//mapa
+            templateUrl:"templates/show.html",
+            controller:"showController",
+            controllerAs:"show"
+        });
+        $routeProvider.when("",{//mapa
+            templateUrl:"templates/show.html",
+            controller:"showController",
+            controllerAs:"restaurant"
+        });
+        $routeProvider.when("/DIY",{
+            templateUrl:"templates/diy.html",
+            controller:"diyController",
+            controllerAs:"diy"
+        });
+        
+        
 }]);
 
 app.directive("appHeader", function(){
-	return{
-		restrict:"AE",
-		templateUrl:"components/header.html"
-	};
+    return{
+        restrict:"AE",
+        templateUrl:"components/header.html"
+    };
 });
 app.directive("appFooter", function(){
-	return{
-		templateUrl:"components/footer.html"
-	};
+    return{
+        templateUrl:"components/footer.html"
+    };
 });
 app.directive("appProviders", function(){
-	return{
-		restrict: "AE",
-		templateUrl:"components/providers.html"
+    return{
+        restrict: "AE",
+        templateUrl:"components/providers.html"
 
-	};
+    };
 });
 app.directive("appDescriptions", function(){
-	return{
-		restrict: "AE",
-		templateUrl:"components/description.html"
+    return{
+        restrict: "AE",
+        templateUrl:"components/description.html"
 
-	};
+    };
 });
 
 
-//................carousel...............................
 app.controller("indexController", function($scope,$http){
-	$http.get(DATA).then(function(data){
-		$scope.proveedores = data.data
-	});
-	$scope.viewLoaded= function(){
-		$(".carousel").carousel()
-	}
+    $http.get(DATA).then(function(data){
+        $scope.proveedores = data.data
+    });
+//................carousel...............................
+    $scope.viewLoaded= function(){
+        $(".carousel").carousel()
+    }
+//................form...............................
+      $scope.submitForm = function() {
+          if ($scope.userForm.$valid) {
+              alert('Gracias por contactar con nosotros. Un saludo croquetero!');
+          }
+      };
 });
 app.controller("diyController", function($scope, $http){
-
+//................diy/api...............................
 function tplawesome(e,t){res=e;for(var n=0;n<t.length;n++){res=res.replace(/\{\{(.*?)\}\}/g,function(e,r){return t[n][r]})}return res}
 
 $(function() {
@@ -96,7 +99,7 @@ $(function() {
             part: "snippet",
             type: "video",
             q: encodeURIComponent($("#search").val()).replace(/%20/g, "+"),
-            maxResults: 5,
+            maxResults: 24,
             order: "viewCount",
             publishedAfter: "2015-01-01T00:00:00Z"
        }); 
@@ -123,7 +126,7 @@ function resetVideoHeight() {
 function init() {
     gapi.client.setApiKey("AIzaSyAFR9xkastixhFBtcNpdQoRC855JuZWflo");
     gapi.client.load("youtube", "v3", function() {
-        // yt api is ready
+        // youtubet api is ready
     });
 }
 
@@ -131,25 +134,22 @@ function init() {
 });
 //................seccion mapa...............................
 app.controller("showController", function($scope,$routeParams,$http){
-	$http.get(DATA).then(function(id){
-		var Id =$routeParams.proveedorId;
-		var proveedor= id.data;
-		$scope.proveedor= findProveedor(proveedor,Id);
-	});
-    $scope.myDataId= $routeParams.id
-
-		 $scope.myVar = false;
+    $http.get(DATA).then(function(id){
+        var Id =$routeParams.proveedorId;
+        var proveedor= id.data;
+        $scope.proveedor= findProveedor(proveedor,Id);
+    });
+        $scope.myVar = false;
     $scope.toggle = function() {
         $scope.myVar = !$scope.myVar;
     };
-     $scope.filters = {};
+     $scope.filters = { };  
 });
 
 //......animation del marker......
-
- app.controller('MarkerAnimationCtrl', function() {
-   var vm = this;
-   vm.toggleBounce = function() {
+ app.controller('MarkerAnimationCtrl', function($scope, $rootScope, $http, NgMap) {
+    
+   $scope.toggleBounce = function() {
      if (this.getAnimation() != null) {
        this.setAnimation(null);
      } else {
@@ -158,5 +158,18 @@ app.controller("showController", function($scope,$routeParams,$http){
    }
  });
 
+
+app.run(function($rootScope, NgMap) {
+  NgMap.getMap().then(function(map) {
+    $rootScope.map = map;
+  });
+});
+
+
+
+
+//cierre de function principal
 })();
+
+
 

@@ -28,33 +28,62 @@
 				</div>
 			</div>	
 			<div class="col-md-6 ">
-				<form class="user" action="" method="post">	
-					<div class="name">
-						<img src="photos/nombre.png">
-						<br>
-						<input class="first" placeholder="  Escribe aquí tu nombre" type="text" name="name" required>
-					</div>
-					<div class="email">
-						<img src="photos/email.png">
-						<br>
-						<input class="contact" placeholder="  E-mail" type="text" name="email" required>
-					</div>	
-					<div class="subject">
-						<img src="photos/asunto.png">
-						<br>
-						<input class="issue" placeholder="  Motivo de tu consulta" type="text" name="asunto" required>
-					</div>
-					<div class="contents">
-						<img src="photos/mensaje.png">
-						<br>
-						<textarea class="textarea" placeholder="  Escríbenos tu mensaje aquí"></textarea>
-						<input ng-src="photos/env.png" class="sent" type="image"   ng-click="submitForm(formData)"> 
-					</div>
-					</form>
-			</div>
+			       <form class="contact_form user" name="userForm" ng-submit="submitForm()" novalidate>
+			           	<ul>
+			               	<div class="form-group" 
+				              	ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+				                <!-- <label>Nombre: </label> -->
+				                <img src="photos/nombre.png">
+				                <br>
+				                <input 
+				                    class="first" 
+				                   	type="text" 
+				                   	name="name" class="form-control" 
+				                   	ng-model="user.name" 
+				                   	placeholder="Escribe aquí tu nombre" 
+				                   	required>
+				                   	<p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">Completa este campo</p>
+			               	</div>
+							<div class="form-group email" 
+								ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+			                   	<!-- <label>Email: </label> -->
+			                   	<img src="photos/email.png">
+			                   	<br>
+			                   	<input 
+			                   		class="contact" 
+			                   		type="email" 
+			                   		name="email" 
+			                   		class="form-control" 
+			                   		ng-model="user.email" 
+			                   		placeholder="nombre@algo.es">
+			                   		<p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">La dirección debe tener este formato: <en> nombre@algo.es </en> .</p>
+			               </div>
+
+			               <div> 
+			                   <!-- <label for="message">Mensaje: </label>  -->
+			                   <img src="photos/mensaje.png">
+			                   <br>
+			                   <textarea 
+			                   		class="textarea" 
+			                  		name="message" 
+			                  		class="form-control" 
+			                  		placeholder="Escribenos aquí tu mensaje" 
+			                  		required>
+			                  	</textarea>
+			               </div> 
+			               <button type="submit" class="submit btn-warning" ng-disabled="userForm.$invalid">Enviar</button>
+			        </ul>
+			         
+			       </form>
+   			</div>
 		</div>		
 	</div>		
 </div>	
+				
+						
+			
+		
+
 
 				
 						
