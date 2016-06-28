@@ -1,85 +1,84 @@
 
 <div class="container">
-	<div class="row form">
-		<div class="col-md-12 mainBox">			
-			<div class="col-md-6 hello ">
-				<div class="photoHello">
-					<img src="photos/HOLA.png">
-				</div>
-				<div class="textHello">
-					<p>¡Estamos deseando conoceros!
-					<br>
-					Si queréis poneros en contacto con nosotros
-					<br>
-					para resolver dudas, concertar una cita o pedirnos
-					<br>	
-					un presupuesto, estas son nuestras coordenadas: </p>
-					<br>
-					<p>infosrsracroqueta@gmail.com
-					<br>
-					Tel.:647 115 773 // 678 236 941</p>
-				</div>
-				<div class="row">
-					<div class="col-md-6">
-						<div class="logoDos">
-							<img src="photos/correo.png">
-						</div>
-					</div>
-				</div>
-			</div>	
-			<div class="col-md-6 ">
-			       <form class="contact_form user" name="userForm" ng-submit="submitForm()" novalidate>
-			           	<ul>
-			               	<div class="form-group" 
-				              	ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
-				                <!-- <label>Nombre: </label> -->
-				                <img src="photos/nombre.png">
-				                <br>
-				                <input 
-				                    class="first" 
-				                   	type="text" 
-				                   	name="name" class="form-control" 
-				                   	ng-model="user.name" 
-				                   	placeholder="Escribe aquí tu nombre" 
-				                   	required>
-				                   	<p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">Completa este campo</p>
-			               	</div>
-							<div class="form-group email" 
-								ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
-			                   	<!-- <label>Email: </label> -->
-			                   	<img src="photos/email.png">
-			                   	<br>
-			                   	<input 
-			                   		class="contact" 
-			                   		type="email" 
-			                   		name="email" 
-			                   		class="form-control" 
-			                   		ng-model="user.email" 
-			                   		placeholder="nombre@algo.es">
-			                   		<p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">La dirección debe tener este formato: <en> nombre@algo.es </en> .</p>
-			               </div>
+    <div class="row form">
+        <div class="col-md-12 mainBox">            
+            <div class="col-md-6 hello ">
+                <div class="photoHello">
+                    <img src="photos/HOLA.png">
+                </div>
+                <div class="textHello">
+                    <p>¡Estamos deseando conoceros!
+                    <br>
+                    Si queréis poneros en contacto con nosotros
+                    <br>
+                    para resolver dudas, concertar una cita o pedirnos
+                    <br>    
+                    un presupuesto, estas son nuestras coordenadas: </p>
+                    <br>
+                    <p>infosrsracroqueta@gmail.com
+                    <br>
+                    Tel.:647 115 773 // 678 236 941</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="logoDos">
+                            <img src="photos/correo.png">
+                        </div>
+                    </div>
+                </div>
+            </div>    
+            <div class="col-md-6 ">
+                   <form class="contact_form user" name="userForm" ng-submit="submitForm()" novalidate>
+                           <ul>
+                               <div class="form-group" 
+                                  ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+                                <!-- <label>Nombre: </label> -->
+                                <img src="photos/nombre.png">
+                                <br>
+                                <input 
+                                    class="first" 
+                                       type="text" 
+                                       name="name" class="form-control" 
+                                       ng-model="user.name" 
+                                       placeholder="  Escribe aquí tu nombre" 
+                                       required>
+                                       <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">Completa este campo</p>
+                               </div>
+                            <div class="form-group email" 
+                                ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+                                   <!-- <label>Email: </label> -->
+                                   <img src="photos/email.png">
+                                   <br>
+                                   <input 
+                                       class="contact" 
+                                       type="email" 
+                                       name="email" 
+                                       class="form-control" 
+                                       ng-model="user.email" 
+                                       placeholder="  nombre@algo.es">
+                                       <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block"><en> nombre@algo.es </en> .</p>
+                           </div>
 
-			               <div> 
-			                   <!-- <label for="message">Mensaje: </label>  -->
-			                   <img src="photos/mensaje.png">
-			                   <br>
-			                   <textarea 
-			                   		class="textarea" 
-			                  		name="message" 
-			                  		class="form-control" 
-			                  		placeholder="Escribenos aquí tu mensaje" 
-			                  		required>
-			                  	</textarea>
-			               </div> 
-			               <button type="submit" class="submit btn-warning" ng-disabled="userForm.$invalid">Enviar</button>
-			        </ul>
-			         
-			       </form>
-   			</div>
-		</div>		
-	</div>		
-</div>	
-				
+                           <div> 
+                               <!-- <label for="message">Mensaje: </label>  -->
+                               <img src="photos/mensaje.png">
+                               <br>
+                               <textarea
+                                      name="message" 
+                                      class="form-control textarea" 
+                                      ng-model="textarea.name"
+                                      placeholder="Escribenos aquí tu mensaje" 
+                                      required>
+                                  </textarea>
+                           </div>
+                           <br> 
+                           <button type="submit" class="submit btn-warning" ng-disabled="userForm.$invalid">Enviar</button>
+                        </ul>
+                    </form>
+              </div>
+        </div>        
+    </div>        
+</div>
 						
 			
 		
