@@ -155,8 +155,8 @@ input {
   border-radius: 5px; }
 
 .sizeMap {
-  width: 585px;
-  height: 370.4px;
+  width: 585px !important;
+  height: 370.4px !important;
   overflow: hidden;
   border-radius: 20px;
   border: 1px;
@@ -237,5 +237,17 @@ a:-webkit-any-link {
 
 .center {
   text-align: center; }
+
+.titleCar {
+  font-family: BrainFlower, BrainFlowerEuro !important;
+  font-weight: 600;
+  font-size: 460%;
+  text-align: center !important; }
+
+.carousel-caption {
+  padding-bottom: 12% !important; }
+
+.fontWidth {
+  font-size: large !important; }
 
 /*# sourceMappingURL=index.css.map */

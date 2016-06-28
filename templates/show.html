@@ -23,9 +23,8 @@
                                 on-click="showInfoWindow('myInfoWindow')"
                                 animation="DROP"
                                 draggable="true">
-                                <info-window id="myInfoWindow" visible-on-marker="gmapMarker" max-width="400">
+                                <info-window id="myInfoWindow" max-width="200">
                                 <div ng-non-bindable="">
-                                    <img ng-src="{{local.photo}}">
                                     <h5>{{local.title}}</h5>
                                     <p>{{local.address}}</p>
                                     <p>{{local.price}}</p>
@@ -46,7 +45,6 @@
 			</div>
 		<div class="centerdescription"app-descriptions ng-repeat="local in proveedor.locations">
         </div app-descriptions> 
-	   </div>
 	</div>	
 </div>
 

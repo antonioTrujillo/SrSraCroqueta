@@ -83,8 +83,7 @@ app.controller("indexController", function($scope,$http){
 //................form...............................
       $scope.submitForm = function() {
           if ($scope.userForm.$valid) {
-              alert('Gracias por contactar con nosotros. Un saludo croquetero!');
-          }
+sweetAlert('Muchas Gracias!', 'Tu mensaje ha sido enviado correctamente','success');          }
       };
 });
 app.controller("diyController", function($scope, $http){
@@ -132,13 +131,14 @@ function init() {
 
 
 });
-//................seccion mapa...............................
 app.controller("showController", function($scope,$routeParams,$http){
     $http.get(DATA).then(function(id){
         var Id =$routeParams.proveedorId;
         var proveedor= id.data;
         $scope.proveedor= findProveedor(proveedor,Id);
     });
+    
+//........Toggle Descriptions...........................................
         $scope.myVar = false;
     $scope.toggle = function() {
         $scope.myVar = !$scope.myVar;
@@ -146,9 +146,9 @@ app.controller("showController", function($scope,$routeParams,$http){
      $scope.filters = { };  
 });
 
-//......animation del marker......
- app.controller('MarkerAnimationCtrl', function($scope, $rootScope, $http, NgMap) {
-    
+ app.controller('MarkerAnimationCtrl', function($scope) {
+ 
+ //......animation del marker............................................  
    $scope.toggleBounce = function() {
      if (this.getAnimation() != null) {
        this.setAnimation(null);
